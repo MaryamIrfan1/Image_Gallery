@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PETS IMAGE <span>GALLERY</span></h1>
+    </div>
+    <section class="gallery">
+        <div class="buttons">
+            <button type="button" class="main">All Images</button>
+            <button type="button" data-btn="1">Cats</button>
+            <button type="button" data-btn="2">Dogs</button>
+            <button type="button" data-btn="3">Rabbits</button>
+        </div>
+        <div class="images">
+            <div class="column">
+                <img src="Images/c1.jpg" alt="" data-img="1">
+                <img src="Images/d6.jpeg" alt="" data-img="2">
+                <img src="Images/d4.jpg" alt="" data-img="2">
+                <img src="Images/r1.jpg" alt="" data-img="3">
+                <img src="Images/d1.jpg" alt="" data-img="2">
+                <img src="Images/c6.jpg" alt="" data-img="1">
+            </div>
+            <div class="column">
+                <img src="Images/d5.jpeg" alt="" data-img="2">
+                <img src="Images/img-6.jpg" alt="" data-img="1">
+                <img src="Images/r7.jpg" alt="" data-img="3">
+                <img src="Images/d3.jpg" alt="" data-img="2">
+                <img src="Images/img-4.jpg" alt="" data-img="2">
+            </div>
+            <div class="column">
+                <img src="Images/img-3.jpg" alt="" data-img="2">
+                <img src="Images/d3.jpg" alt="" data-img="2">
+                <img src="Images/d2.jpg" alt="" data-img="2">
+                <img src="Images/c2.jpg" alt="" data-img="1">
+                <img src="Images/r2.jpg" alt="" data-img="3">
+                <img src="Images/r4.jpeg" alt="" data-img="3">
+            </div>
+        </div>
+    </section>
+<!-- Modal for Image Enlargement  -->
+      <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div class="modal-caption" id="caption"></div>
+        <a class="prev" id="prev">&#10094;</a>
+        <a class="next" id="next">&#10095;</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

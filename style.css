@@ -1,0 +1,193 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+ }
+
+ body {
+   margin: 0;
+ }
+
+ .container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #22222286;
+   height: 100px;
+   color: #fff;
+   font-family: 'Roboto', sans-serif;
+   position: relative;
+ }
+
+ .container h1 {
+   font-size: 3em;
+   font-weight: 600;
+   color: #ffffff;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+   margin: 0;
+ }
+
+ .container h1 span {
+   font-weight: 100;
+   color: #f0a500;
+ }
+
+ .gallery {
+   padding: 2em;
+   min-height: 120vh;
+   background: #222222f8;
+ }
+
+ .buttons {
+   padding: 0em 0 6em 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+ }
+
+ .buttons button {
+   margin: 1em;
+   padding: 0.7em 1.5em;
+   font-size: 1.3em;
+   border: none;
+   background: #111;
+   color: #fff;
+   border: 3px solid #111;
+   border-radius: 0.2em;
+   cursor: pointer;
+   transition: 0.3s;
+ }
+
+ .buttons .main {
+   background-color: grey;
+   color: black;
+ }
+
+ .buttons button:hover,
+ .buttons .btn-clicked {
+   background: #fff;
+   color: #111;
+ }
+
+ .gallery .images {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+
+ }
+
+ .gallery .images .column {
+   display: flex;
+   flex-direction: column;
+   width: 32.5%;
+ }
+
+ .images .column img {
+   width: 100%;
+   padding-bottom: 15px;
+   border-radius: 5px;
+
+ }
+
+ .images img.filtered-in {
+   margin: 0;
+ }
+
+ .images img.img-shrink {
+   display: none;
+ }
+
+ @media screen and(max-width:989px) {
+   .images {
+     align-items: center;
+     flex-direction: column;
+   }
+
+   .images img {
+     margin-right: 0 !important;
+     margin-left: 0 !important;
+   }
+ }
+
+ @media screen and(max-width: 600px) {
+   .buttons button {
+     width: 100%;
+     display: block;
+   }
+
+   .images .img-expand .images img {
+     width: 100%;
+   }
+ }
+
+ .modal {
+   display: none;
+   position: fixed;
+   z-index: 1000;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0, 0, 0, 0.9);
+   padding-top: 60px;
+ }
+
+ .modal-content {
+   margin: auto;
+   display: block;
+   max-width: 90%;
+   max-height: 80vh;
+   object-fit: contain;
+   border-radius: 10px;
+ }
+
+ .modal-caption {
+   margin: auto;
+   display: block;
+   width: 90%;
+   max-width: 700px;
+   text-align: center;
+   color: #ccc;
+   padding: 10px 0;
+ }
+
+ .modal .close,
+ .modal .prev,
+ .modal .next {
+   position: absolute;
+   top: 50%;
+   color: white;
+   font-size: 40px;
+   font-weight: bold;
+   transition: 0.3s;
+   cursor: pointer;
+   user-select: none;
+ }
+
+ .modal .close {
+   right: 25px;
+   top: 10px;
+   font-size: 60px;
+   transform: translate(0%, -50%);
+ }
+
+ .modal .prev {
+   left: 5%;
+   transform: translate(0%, -50%);
+ }
+
+ .modal .next {
+   right: 5%;
+   transform: translate(0%, -50%);
+ }
+
+ .modal .close:hover,
+ .modal .prev:hover,
+ .modal .next:hover {
+   color: #bbb;
+ }
